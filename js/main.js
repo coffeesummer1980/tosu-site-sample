@@ -108,3 +108,17 @@
     }
   });
 })();
+
+// スマホではメニューをヘッダーの外（body直下）に出す。
+// ヘッダーの中にあると、ブラウザによってはメニューがヘッダーの高さに閉じこめられるため。
+(function () {
+  var nav = document.getElementById('gnav'), header = document.getElementById('header'), btn = document.getElementById('menuBtn');
+  if (!nav || !header) return;
+  var mq = window.matchMedia('(max-width:1000px)');
+  function place() {
+    if (mq.matches) { if (nav.parentNode !== document.body) document.body.appendChild(nav); }
+    else { if (nav.parentNode !== header) header.insertBefore(nav, btn); document.body.classList.remove('menu-open'); }
+  }
+  place();
+  (mq.addEventListener ? mq.addEventListener('change', place) : mq.addListener(place));
+})();
