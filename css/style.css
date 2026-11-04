@@ -352,3 +352,51 @@ ul,ol{list-style:none}
 .top-blog .blog__list{margin-top:8px}
 .more{font-weight:700;text-decoration:none;border-bottom:2px solid var(--teal);padding-bottom:2px;margin-bottom:28px}
 .post__h{font-size:17px;line-height:1.6}
+
+/* ===== 講演依頼ページ ===== */
+.sub .lec-hero{margin-top:-76px}
+.lec-hero{position:relative;min-height:88svh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:140px 0 80px}
+.lec-hero__bg{position:absolute;inset:0;background-size:cover;background-position:center;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-2%,-1%)}}
+.lec-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,20,26,.9),rgba(10,20,26,.55));z-index:1}
+.lec-hero__body{position:relative;z-index:2}
+.lec-hero .sec__en{color:var(--teal)}
+.lec-hero__ttl{font-family:var(--mincho);font-weight:800;font-size:clamp(30px,5vw,64px);line-height:1.4;margin-bottom:20px;animation:up 1s .2s both}
+.lec-hero__ttl em{font-style:normal;color:var(--teal)}
+.lec-hero__lead{font-size:clamp(15px,1.3vw,18px);animation:up 1s .5s both}
+.lec-prof{display:grid;grid-template-columns:4fr 7fr;gap:56px;align-items:center}
+.lec-prof img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:18px 18px 0 var(--teal)}
+.lec-prof__role{display:block;font-family:var(--sans);font-size:14px;font-weight:500;color:var(--mute);margin-top:4px}
+.lec-prof p{margin-bottom:1em}
+.lec-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.lec-badges li{background:var(--ink);color:#fff;font-size:13px;padding:4px 14px;border-radius:99px}
+.lec-badges li::before{content:"🏆 "}
+.lec-themes{background:#fff}
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.theme{background:var(--paper);border-radius:var(--r);padding:30px 26px;position:relative;overflow:hidden;transition:transform .3s,background .3s,color .3s}
+.theme:hover{transform:translateY(-6px);background:var(--ink);color:#fff}
+.theme__no{font-family:var(--en);font-weight:800;font-size:40px;color:var(--teal);line-height:1}
+.theme h3{font-family:var(--mincho);font-size:20px;line-height:1.5;margin:10px 0 12px}
+.theme p{font-size:14px;line-height:1.8}
+.theme__for{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(0,0,0,.15);font-weight:700;color:var(--teal-d)}
+.theme:hover .theme__for{border-color:rgba(255,255,255,.2);color:var(--teal)}
+.theme__for::before{content:"おすすめ：";font-weight:500}
+.format-list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.format-list li{background:#fff;border-radius:var(--r);padding:24px 20px;font-size:14px;border-top:3px solid var(--teal)}
+.format-list b{display:block;font-family:var(--mincho);font-size:19px;margin-bottom:6px}
+.lec-flow{background:var(--paper2)}
+.lec-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
+.lec-steps li{background:#fff;border-radius:var(--r);padding:26px 22px;position:relative}
+.lec-steps b{font-family:var(--en);font-size:28px;color:#fff;background:var(--teal-d);width:46px;height:46px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px}
+.lec-steps h3{font-size:18px;margin-bottom:6px}
+.lec-steps p{font-size:14px;line-height:1.8}
+.lec-checklist h3{font-family:var(--mincho);font-size:20px;margin-bottom:12px}
+@media (max-width:900px){.theme-grid,.format-list,.lec-steps{grid-template-columns:1fr 1fr}.lec-prof{grid-template-columns:1fr;gap:32px}.lec-prof img{aspect-ratio:4/3;box-shadow:10px 10px 0 var(--teal)}}
+@media (max-width:600px){.theme-grid,.format-list,.lec-steps{grid-template-columns:1fr}.lec-hero{min-height:auto;padding:130px 0 60px}}
+
+/* トップの講演バナー */
+.lec-band{background:var(--ink);color:#fff;padding:64px 0}
+.lec-band__in{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.lec-band h2{font-family:var(--mincho);font-size:clamp(24px,3vw,34px);line-height:1.5}
+.lec-band h2 em{font-style:normal;color:var(--teal)}
+.lec-band p{color:#b8c3c9;font-size:14px;margin-top:6px}
