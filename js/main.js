@@ -95,3 +95,16 @@
   var contact = document.getElementById('contact'), spCta = document.querySelector('.sp-cta');
   if (contact && spCta) new IntersectionObserver(function (es) { spCta.classList.toggle('is-hidden', es[0].isIntersecting); }, { threshold: .15 }).observe(contact);
 })();
+
+// イベント告知：data-end の翌日になったら隠す／開催中は「開催中！」に切り替える
+(function () {
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  function d(s) { var a = s.split('-'); return new Date(+a[0], a[1] - 1, +a[2]); }
+  document.querySelectorAll('[data-end]').forEach(function (el) {
+    if (today > d(el.dataset.end)) { el.hidden = true; return; }
+    if (el.dataset.start && today >= d(el.dataset.start)) {
+      el.classList.add('is-now');
+      var b = el.querySelector('[data-badge]'); if (b) b.textContent = '本日開催中！';
+    }
+  });
+})();

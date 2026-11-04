@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261104b">
+<link rel="stylesheet" href="css/style.css?v=20261104d">
 </head>
 <body>
 
@@ -90,8 +90,42 @@
       <a class="btn btn--ghost" href="#works">実績を見る</a>
     </div>
   </div>
+  <!-- イベントの小さな案内（data-end を過ぎると自動で消える） -->
+  <a class="hero__event" href="#event" data-end="2026-11-08">
+    <span class="hero__event-tag">EVENT</span>11/7・8 ローカルフードファイト<span class="pc">&nbsp;in 鳥取</span><span class="hero__event-arrow">→</span>
+  </a>
   <a class="hero__scroll" href="#numbers" aria-label="下へ">Scroll</a>
 </section>
+
+<!-- ========== イベント告知（差し替え手順は 01_HP/イベント差し替え手順.md） ==========
+     data-end の翌日になると、この欄とヒーローの案内は自動で隠れる -->
+<section class="event" id="event" data-start="2026-11-07" data-end="2026-11-08" aria-label="開催イベント">
+  <div class="wrap event__in">
+    <figure class="event__flyer reveal">
+      <a href="img/event/lff2026-flyer.webp" target="_blank" rel="noopener"><img src="img/event/lff2026-flyer.webp" alt="LOCAL FOOD FIGHT in 鳥取 のチラシ。2026年11月7日・8日、鳥取県立美術館 大御堂廃寺跡芝生広場" width="800" height="1132" loading="lazy"></a>
+    </figure>
+    <div class="event__body">
+      <p class="event__label reveal"><span class="event__badge" data-badge>まもなく開催</span>TOSUが大会事務局を務めます</p>
+      <h2 class="event__ttl reveal">全国のうまい！が<br>倉吉に大集合。</h2>
+      <p class="event__name reveal">LOCAL FOOD FIGHT in 鳥取<small>全国ご当地グルメ 東西売上バトル</small></p>
+      <dl class="event__info reveal">
+        <div><dt>日時<small class="event__yr">2026年</small></dt><dd><b>11月7日(土)</b> 9:30〜20:00<br><b>11月8日(日)</b> 9:45〜18:00<br><small>飲食ブースは両日10:00から／荒天決行</small></dd></div>
+        <div><dt>会場</dt><dd>鳥取県立美術館前 大御堂廃寺跡芝生広場<br><small>倉吉市駄経寺町2-3-12</small></dd></div>
+        <div><dt>入場</dt><dd>無料<small>（飲食はチケット制）</small></dd></div>
+        <div><dt>ゲスト</dt><dd>11/7(土) 13:30〜 歌手・声優 <b>松本梨香</b>さん 生歌＆トークショー<br><small>観覧チケットが必要（当日販売なし）</small></dd></div>
+      </dl>
+      <p class="event__note reveal">全国から50店以上が西軍・東軍に分かれて売上を競います。会場へは中部総合事務所前から無料シャトルバスも運行。</p>
+      <div class="event__btns reveal">
+        <a class="btn btn--event" href="https://localfoodfight.jp/" target="_blank" rel="noopener">公式サイトで詳しく見る</a>
+        <a class="btn btn--event-sub" href="https://localfoodf.base.shop/" target="_blank" rel="noopener">チケットを買う</a>
+        <a class="event__ig" href="https://www.instagram.com/loca.lfoodfight/" target="_blank" rel="noopener">最新情報はInstagram →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"LOCAL FOOD FIGHT in 鳥取","startDate":"2026-11-07T09:30+09:00","endDate":"2026-11-08T18:00+09:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"鳥取県立美術館前 大御堂廃寺跡芝生広場","address":{"@type":"PostalAddress","addressRegion":"鳥取県","addressLocality":"倉吉市","streetAddress":"駄経寺町2-3-12"}},"image":"img/event/lff2026-flyer.webp","description":"全国ご当地グルメ50店以上による東西売上バトル。入場無料。","organizer":{"@type":"Organization","name":"LOCAL FOOD FIGHT実行委員会","url":"https://localfoodfight.jp/"},"isAccessibleForFree":true}
+</script>
 
 <!-- 数字 -->
 <section class="numbers" id="numbers">
@@ -376,7 +410,8 @@
     <h2 class="sec__ttl reveal">お知らせ</h2>
     <ul class="news__list reveal">
       <li><time datetime="2026-10-26">2026.10.26</time><span class="cat">採用</span><a href="#">【急募】サービス管理責任者募集（勤務地：鳥取県倉吉市）</a></li>
-      <li><time datetime="2026-09-14">2026.09.14</time><span class="cat">イベント</span><a href="#">ローカルフードファイト 最新出店店舗情報</a></li>
+      <li><time datetime="2026-11-04">2026.11.04</time><span class="cat">イベント</span><a href="#event">11/7・8「LOCAL FOOD FIGHT in 鳥取」を開催します（TOSUは大会事務局）</a></li>
+      <li><time datetime="2026-09-14">2026.09.14</time><span class="cat">イベント</span><a href="https://localfoodfight.jp/" target="_blank" rel="noopener">ローカルフードファイト 最新出店店舗情報</a></li>
       <li><time datetime="2026-06-29">2026.06.29</time><span class="cat">勉強会</span><a href="#">出版研究会 第4回勉強会のお知らせ</a></li>
       <li><time>2026.06</time><span class="cat">メディア</span><a href="#">【新聞掲載】時計修理で就労支援</a></li>
       <li><time>2026.03</time><span class="cat">講演</span><a href="#">京都信用金庫 全支店向け勉強会の講師を務めました</a></li>
@@ -418,6 +453,6 @@
 
 <a class="sp-cta btn btn--line" href="https://line.me/R/ti/p/@096gadyq" target="_blank" rel="noopener">LINEで相談</a>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20261104d"></script>
 </body>
 </html>
